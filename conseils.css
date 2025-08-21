@@ -1,0 +1,129 @@
+/* Style global */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fc;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+.navbar a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navbar a.active, .navbar a:hover {
+  color: #ffcc00;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #1abc9c;
+}
+
+/* Contenu principal */
+.contenu {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.contenu h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contenu .intro {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Cartes conseils */
+.conseil-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.conseil-card:hover {
+    transform: translateY(-5px);
+}
+
+.conseil-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1abc9c;
+}
+
+.conseil-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .contenu h1 {
+        font-size: 22px;
+    }
+
+    .conseil-card {
+        padding: 15px;
+    }
+}

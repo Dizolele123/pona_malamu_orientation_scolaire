@@ -1,0 +1,91 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: #8e24aa;
+  padding: 15px 0;
+}
+.header .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+.logo span {
+  color: #ffeb3b;
+}
+.navbar a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #ffeb3b;
+}
+
+/* Résultat */
+main.container {
+  width: 90%;
+  max-width: 700px;
+  margin: 50px auto;
+}
+.result-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.result-card h2 {
+  color: #8e24aa;
+  margin-bottom: 20px;
+}
+.result-card h3 {
+  color: #2e7d32;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.result-card p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.btn {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #8e24aa;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #fdd835;
+}
+
+/* Footer */
+.footer {
+  background: #8e24aa;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
