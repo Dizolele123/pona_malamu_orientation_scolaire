@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test d’Orientation</title>
+  <link rel="stylesheet" href="css/orientation.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Orientation<span>Scolaire</span></h1>
+      <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="orientation.html" class="active">Orientation</a>
+        <a href="filieres.html">Filières</a>
+        <a href="conseils.html">Conseils</a>
+        <a href="formations.html">Formations</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Formulaire -->
+  <main class="container">
+    <h2>Test d’Orientation</h2>
+    <p>Réponds aux questions suivantes pour découvrir la filière adaptée à ton profil.</p>
+
+    <form action="resultat.php" method="POST" class="orientation-form">
+      <div class="question">
+        <label>Aimes-tu les mathématiques ?</label><br>
+        <input type="radio" name="maths" value="oui" required> Oui
+        <input type="radio" name="maths" value="non"> Non
+      </div>
+
+      <div class="question">
+        <label>Es-tu intéressé par les sciences humaines ?</label><br>
+        <input type="radio" name="sciences" value="oui" required> Oui
+        <input type="radio" name="sciences" value="non"> Non
+      </div>
+
+      <div class="question">
+        <label>Préférerais-tu travailler avec tes mains (métier pratique/technique) ?</label><br>
+        <input type="radio" name="technique" value="oui" required> Oui
+        <input type="radio" name="technique" value="non"> Non
+      </div>
+
+      <button type="submit" class="btn">Voir mon orientation</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Orientation Scolaire - Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
