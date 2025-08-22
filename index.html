@@ -4,14 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orientation Scolaire - Accueil</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="container">
       <h1 class="logo">Orientation<span>Scolaire</span></h1>
-      <nav class="navbar">
+
+      <!-- Bouton hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="navbar" id="nav-menu">
         <a href="index.html" class="active">Accueil</a>
         <a href="orientation.html">Orientation</a>
         <a href="filieres.html">Filières</a>
@@ -55,6 +63,16 @@
   <footer class="footer">
     <p>© 2025 Orientation Scolaire - Tous droits réservés.</p>
   </footer>
+
+  <!-- Script pour le menu hamburger -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
-
