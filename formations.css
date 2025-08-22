@@ -12,36 +12,62 @@ body {
 }
 
 /* HEADER */
-header {
+.header {
   background: #004aad;
   color: white;
   padding: 15px 40px;
+}
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  margin: auto;
 }
-
-header .logo {
+.logo {
   font-size: 1.5em;
   font-weight: bold;
 }
-
-nav ul {
-  list-style: none;
+.logo span {
+  color: #ffcc00;
+}
+.navbar {
   display: flex;
   gap: 20px;
 }
-
-nav ul li a {
-  color: white;
+.navbar a {
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
 }
-
-nav ul li a:hover,
-nav ul li a.active {
+.navbar a:hover,
+.navbar a.active {
   color: #ffcc00;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* HERO */
@@ -51,12 +77,10 @@ nav ul li a.active {
   background: linear-gradient(to right, #004aad, #0066cc);
   color: white;
 }
-
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
-
 .hero p {
   font-size: 1.2rem;
 }
@@ -69,7 +93,6 @@ nav ul li a.active {
   width: 85%;
   margin: 40px auto;
 }
-
 .formation-card {
   background: white;
   padding: 25px;
@@ -77,17 +100,14 @@ nav ul li a.active {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
-
 .formation-card:hover {
   transform: translateY(-5px);
 }
-
 .formation-card h2 {
   color: #004aad;
   margin-bottom: 10px;
   font-size: 20px;
 }
-
 .formation-card p {
   font-size: 15px;
   line-height: 1.6;
@@ -95,7 +115,7 @@ nav ul li a.active {
 }
 
 /* FOOTER */
-footer {
+.footer {
   background: #004aad;
   color: white;
   text-align: center;
@@ -104,20 +124,28 @@ footer {
 }
 
 /* RESPONSIVE */
-@media(max-width: 768px) {
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #004aad;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+  }
+  .navbar.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
   .hero h1 {
     font-size: 2rem;
   }
   .hero p {
     font-size: 1rem;
   }
-}
-.navbar a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: 500;
-}
-.navbar a.active, .navbar a:hover {
-  color: #ffcc00;
 }
